@@ -40,7 +40,7 @@ $> docker compose up --scale mpi_node=2
 ```
 Once all containers are running, you can login into the `mpi_head` node and start MPI jobs with `mpirun`. Alternatively, you can execute a one-shot command on that container with the `docker compose exec` syntax, as follows: 
 
-    docker compose exec --privileged mpi_head mpirun --allow-run-as-root -n 2 python /root/mpi4py_benchmarks/all_tests.py
+    $> docker compose exec --privileged mpi_head mpirun --allow-run-as-root -n 2 python /root/mpi4py_benchmarks/all_tests.py
 
 Breaking the above command down:
 
