@@ -1,0 +1,13 @@
+services:  
+  mpi_head:
+    build: .
+    ports: 
+      - "22"
+    networks: 
+      - mpirun
+  mpi_node:
+    build: .
+    networks:
+      - mpirun
+networks:
+  mpirun:
