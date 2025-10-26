@@ -1,12 +1,16 @@
 services:  
   mpi_head:
-    build: .
+    extends:
+      file: docker-compose-base.yml
+      service: mpi
     ports: 
       - "22"
     networks: 
       - mpirun
   mpi_node:
-    build: .
+    extends:
+      file: docker-compose-base.yml
+      service: mpi
     networks:
       - mpirun
 networks:
